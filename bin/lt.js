@@ -10,6 +10,10 @@ const { version } = require('../package');
 const { argv } = yargs
   .usage('Usage: lt --port [num] <options>')
   .env(true)
+  .option('k', {
+    alias: 'api-key',
+    describe: 'API Key to access the tunnel service',
+  })
   .option('p', {
     alias: 'port',
     describe: 'Internal HTTP server port',
@@ -49,7 +53,7 @@ const { argv } = yargs
   .option('print-requests', {
     describe: 'Print basic request info',
   })
-  .require('port')
+  .demandOption('port')
   .boolean('local-https')
   .boolean('allow-invalid-cert')
   .boolean('print-requests')
@@ -73,6 +77,7 @@ if (typeof argv.port !== 'number') {
     local_key: argv.localKey,
     local_ca: argv.localCa,
     allow_invalid_cert: argv.allowInvalidCert,
+    api_key: argv.apiKey,
   }).catch(err => {
     throw err;
   });
