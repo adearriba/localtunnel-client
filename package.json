@@ -11,7 +11,8 @@
   "contributors": [
     "Roman Shtylman <shtylman@gmail.com>",
     "Gert Hengeveld <gert@hichroma.com>",
-    "Tom Coleman <tom@hichroma.com>"
+    "Tom Coleman <tom@hichroma.com>",
+    "Alejandro de Arriba <adearriba@outlook.com>"
   ],
   "main": "./localtunnel.js",
   "bin": {
