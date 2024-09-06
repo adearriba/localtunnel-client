@@ -1,5 +1,5 @@
 {
-  "name": "@adearriba/localtunnel-client",
+  "name": "@adearriba/localtunnel",
   "description": "Expose localhost to the world",
   "version": "3.0.0",
   "license": "MIT",
@@ -20,7 +20,7 @@
   },
   "scripts": {
     "test": "mocha --reporter list --timeout 60000 -- *.spec.js",
-    "dev": "DEBUG=* node-dev bin/lt.js -- --port 3002 --host http://localhost:3000 -s test"
+    "dev": "DEBUG=* node-dev bin/lt.js -- --port 8080 --host http://localhost:3000 -s test"
   },
   "dependencies": {
     "axios": "0.21.4",
