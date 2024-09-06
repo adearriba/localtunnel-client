@@ -20,12 +20,11 @@
   },
   "scripts": {
     "test": "mocha --reporter list --timeout 60000 -- *.spec.js",
-    "dev": "DEBUG=* node-dev bin/lt.js -- --port 8080 --host http://localhost:3000 -s test"
+    "dev": "DEBUG=localtunnel:* node-dev bin/lt.js -- --port 8080 --host http://localhost:3000 -s test"
   },
   "dependencies": {
     "axios": "0.21.4",
     "debug": "4.3.2",
-    "openurl": "1.1.1",
     "yargs": "17.1.1"
   },
   "devDependencies": {
