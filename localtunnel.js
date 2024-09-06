@@ -16,12 +16,8 @@ async function localtunnel(arg1, arg2, arg3) {
     return client;
   }
 
-  try {
-    await client.open();
-    return client;
-  } catch (err) {
-    throw err;
-  }
+  await client.open();
+  return client;
 }
 
 module.exports = localtunnel;
