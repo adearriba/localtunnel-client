@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
 
-const openurl = require('openurl');
 const yargs = require('yargs');
 
 const localtunnel = require('../localtunnel');
@@ -45,10 +44,6 @@ const { argv } = yargs
   })
   .option('allow-invalid-cert', {
     describe: 'Disable certificate checks for your local HTTPS server (ignore cert/key/ca options)',
-  })
-  .options('o', {
-    alias: 'open',
-    describe: 'Opens the tunnel URL in your browser',
   })
   .option('print-requests', {
     describe: 'Print basic request info',
@@ -95,10 +90,6 @@ if (typeof argv.port !== 'number') {
    */
   if (tunnel.cachedUrl) {
     console.log('your cachedUrl is: %s', tunnel.cachedUrl);
-  }
-
-  if (argv.open) {
-    openurl.open(tunnel.url);
   }
 
   if (argv['print-requests']) {
